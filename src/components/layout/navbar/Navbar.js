@@ -16,7 +16,7 @@ export const Navbar = () => {
           className='find-airport__input'
           placeholder='Search Airports'
         />
-        <button class='find-airport__button'>
+        <button className='find-airport__button'>
           <svg className='find-airport__button__icon'>
             <use xlinkHref='images/sprite.svg#icon-magnifying-glass'></use>
           </svg>
