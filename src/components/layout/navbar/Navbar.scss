@@ -1,0 +1,17 @@
+@import '../../../base.scss';
+
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--bottom-line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    height: 7.3rem;
+    margin-left: 2rem;
+    padding-bottom: 0.3rem;
+  }
+}
