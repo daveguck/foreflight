@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import ConditionsContext from '../../../context/conditions/conditionsContext';
 
 import './Navbar.scss';
 
 export const Navbar = () => {
+  const conditionsContext = useContext(ConditionsContext);
+
+  const { getConditions, conditions, loading } = conditionsContext;
+
+  const [text, setText] = useState('');
+
+  const onChange = (event) => setText(event.target.value);
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    getConditions(text);
+    setText('');
+  };
+
+  if (Object.keys(conditions).length === 0) {
+    console.log('foobar!');
+  } else {
+    console.log(conditions);
+  }
+
   return (
     <header className='header'>
       <img
@@ -10,11 +31,14 @@ export const Navbar = () => {
         alt='foreflight logo'
         className='header__logo'
       />
-      <form action='#' className='find-airport'>
+      <form onSubmit={onSubmit} className='find-airport'>
         <input
           type='text'
+          name='text'
+          value={text}
           className='find-airport__input'
           placeholder='Search Airports'
+          onChange={onChange}
         />
         <button className='find-airport__button'>
           <svg className='find-airport__button__icon'>
