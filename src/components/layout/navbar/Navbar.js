@@ -13,14 +13,14 @@ export const Navbar = () => {
       <form action='#' className='find-airport'>
         <input
           type='text'
-          className='search__input'
+          className='find-airport__input'
           placeholder='Search Airports'
         />
-        {/* <button class="search__button">
-                      <svg className="search__icon">
-                          <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
-                      </svg>
-                  </button> */}
+        <button class='find-airport__button'>
+          <svg className='find-airport__button__icon'>
+            <use xlinkHref='images/sprite.svg#icon-magnifying-glass'></use>
+          </svg>
+        </button>
       </form>
       <nav className='user-nav'>
         <span className='user-nav__item'>Home</span>

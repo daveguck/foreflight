@@ -1,4 +1,4 @@
-@import '../../../base.scss';
+@import '../../../sass/base.scss';
 
 .header {
   font-size: 1.4rem;
@@ -10,8 +10,75 @@
   align-items: center;
 
   &__logo {
-    height: 7.3rem;
+    height: 7.2rem;
     margin-left: 2rem;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .find-airport {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__input {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background-color: var(--color-grey-light-2);
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 100px;
+      width: 90%;
+      margin-right: -3.3rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__button {
+      border: none;
+      background-color: var(--color-grey-light-2);
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:active {
+        transform: translateY(2px);
+      }
+
+      &__icon {
+        height: 2.4rem;
+        width: 2.4rem;
+        fill: var(--color-grey-dark-3);
+
+        &:active {
+          fill: var(--color-primary-light);
+        }
+      }
+    }
+  }
+
+  .user-nav {
+    margin-right: 2rem;
+
+    &__item {
+      font-size: 1.6rem;
+
+      &:hover {
+        cursor: pointer;
+        color: #104057;
+      }
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
   }
 }
