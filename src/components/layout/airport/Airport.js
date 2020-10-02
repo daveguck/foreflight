@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Airport.scss';
 
-export const Airport = () => {
+const Airport = () => {
   return (
     <section className='airport'>
       <h1 className='airport__name'>Austin Bergstrom (kaus)</h1>
@@ -18,11 +18,11 @@ export const Airport = () => {
       </div>
       <div className='airport__runways'>
         <h2 className='runways-title'>Available Runways:</h2>
-        <p className='runway'>Runway1</p>
-        <p className='runway'>Runway2</p>
-        <p className='runway'>Runway3</p>
-        <p className='runway'>Runway4</p>
-        <p className='runway'>Runway5</p>
+        <div className='runway'>Runway1</div>
+        <div className='runway'>Runway2</div>
+        <div className='runway'>Runway3</div>
+        <div className='runway'>Runway4</div>
+        <div className='runway'>Runway5</div>
       </div>
     </section>
   );

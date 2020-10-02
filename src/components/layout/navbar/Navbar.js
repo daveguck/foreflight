@@ -3,7 +3,7 @@ import ConditionsContext from '../../../context/conditions/conditionsContext';
 
 import './Navbar.scss';
 
-export const Navbar = () => {
+const Navbar = () => {
   const conditionsContext = useContext(ConditionsContext);
 
   const { getConditions, loading } = conditionsContext;
