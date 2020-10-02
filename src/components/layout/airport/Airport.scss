@@ -1,0 +1,44 @@
+@import '../../../sass/base.scss';
+
+.airport {
+  height: 150px;
+  max-width: 70%;
+  margin: 2rem auto;
+  text-align: center;
+
+  &__name {
+    font-size: 3.8rem;
+    margin: 7px;
+
+    span {
+      font-size: 3rem;
+    }
+  }
+
+  &__latlong {
+    width: 50%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--color-grey-dark-3);
+
+    .latitude,
+    .longitude {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__runways {
+    background-color: var(--color-grey-light-2);
+    width: 50%;
+    margin: 1.7rem auto;
+    padding: 10px;
+    font-size: 1.3rem;
+    border: 0.5px solid var(--color-grey-light-3);
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

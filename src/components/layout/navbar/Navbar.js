@@ -18,12 +18,6 @@ export const Navbar = () => {
     setText('');
   };
 
-  if (Object.keys(conditions).length === 0) {
-    console.log('foobar!');
-  } else {
-    console.log(conditions);
-  }
-
   return (
     <header className='header'>
       <img
