@@ -1,13 +1,16 @@
 @import '../../../sass/base.scss';
 
 .airport {
-  height: 150px;
-  max-width: 70%;
+  background-color: var(--color-primary-light-2);
+  max-width: 55%;
   margin: 2rem auto;
+  padding: 10px 0;
   text-align: center;
+  border-radius: 3rem;
 
   &__name {
     font-size: 3.8rem;
+
     margin: 7px;
 
     span {
@@ -17,28 +20,35 @@
 
   &__latlong {
     width: 50%;
-    margin: 5px auto;
+    margin: 1rem auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     color: var(--color-grey-dark-3);
 
     .latitude,
     .longitude {
       font-size: 1.7rem;
+      margin-right: 1.4rem;
     }
   }
 
   &__runways {
-    background-color: var(--color-grey-light-2);
     width: 50%;
     margin: 1.7rem auto;
     padding: 10px;
     font-size: 1.3rem;
-    border: 0.5px solid var(--color-grey-light-3);
     border-radius: 3%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    .runways-title {
+      font-weight: 500;
+    }
+
+    .runway {
+      font-weight: 400;
+    }
   }
 }
