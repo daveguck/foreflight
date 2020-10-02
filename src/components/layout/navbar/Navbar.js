@@ -6,7 +6,7 @@ import './Navbar.scss';
 export const Navbar = () => {
   const conditionsContext = useContext(ConditionsContext);
 
-  const { getConditions, conditions, loading } = conditionsContext;
+  const { getConditions, loading } = conditionsContext;
 
   const [text, setText] = useState('');
 

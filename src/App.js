@@ -3,6 +3,7 @@ import ConditionsState from './context/conditions/ConditionsState';
 
 import Navbar from './components/layout/navbar/Navbar';
 import Airport from './components/layout/airport/Airport';
+import Conditions from './components/layout/conditions/Conditions';
 
 import './sass/App.scss';
 
@@ -12,6 +13,7 @@ function App() {
       <div className='container'>
         <Navbar />
         <Airport />
+        <Conditions />
       </div>
     </ConditionsState>
   );
