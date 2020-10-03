@@ -15,6 +15,8 @@ const ConditionsState = (props) => {
     const response = await fetch(`/weather/report/${identifier}`);
     const data = await response.json();
 
+    console.log(data);
+
     dispatch({
       type: GET_CONDITIONS,
       payload: data.report.conditions,

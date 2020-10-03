@@ -8,8 +8,6 @@ const Conditions = () => {
 
   const { conditions, loading } = conditionsContext;
 
-  console.log(conditions);
-
   return (
     <section className='conditions'>
       <h1 className='conditions__title'>Current Weather Conditions</h1>
