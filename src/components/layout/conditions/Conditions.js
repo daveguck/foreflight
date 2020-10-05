@@ -38,14 +38,14 @@ const Conditions = () => {
             <use xlinkHref='images/symbol-defs.svg#icon-eye'></use>
           </svg>
           <h4 className='label'>Visibility</h4>
-          <p className='temperature'>10sm</p>
+          <p className='temperature'>10 sm</p>
         </div>
         <div className='conditions__weather__card'>
           <svg className='icon'>
             <use xlinkHref='images/symbol-defs.svg#icon-air'></use>
           </svg>
           <h4 className='label'>Wind Speed</h4>
-          <p className='temperature'>75&deg;F</p>
+          <p className='temperature'>32 MPH</p>
         </div>
         <div className='conditions__weather__card'>
           <svg className='icon'>
