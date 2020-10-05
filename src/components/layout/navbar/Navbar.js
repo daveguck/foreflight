@@ -36,7 +36,7 @@ const Navbar = () => {
         />
         <button className='find-airport__button'>
           <svg className='find-airport__button__icon'>
-            <use xlinkHref='images/sprite.svg#icon-magnifying-glass'></use>
+            <use xlinkHref='images/symbol-defs.svg#icon-magnifying-glass'></use>
           </svg>
         </button>
       </form>
