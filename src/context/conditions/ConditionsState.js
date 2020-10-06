@@ -5,16 +5,19 @@ import { GET_CONDITIONS, SET_LOADING } from '../types';
 
 const ConditionsState = (props) => {
   const initialState = {
-    conditions: {},
+    conditions: [],
     loading: false,
   };
 
   const [state, dispatch] = useReducer(ConditionsReducer, initialState);
 
   const getConditions = async (identifier) => {
-    const response = await fetch(`/weather/report/${identifier}`);
-    const data = await response.json();
+    console.log(identifier);
+    const response = await fetch(
+      `http://localhost:3000/weather/${identifier}.json`
+    );
 
+    const data = await response.json();
     console.log(data);
 
     dispatch({

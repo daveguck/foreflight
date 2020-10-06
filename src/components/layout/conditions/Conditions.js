@@ -6,7 +6,9 @@ import './Conditions.scss';
 const Conditions = () => {
   const conditionsContext = useContext(ConditionsContext);
 
-  const { conditions, loading } = conditionsContext;
+  const { conditions } = conditionsContext;
+
+  console.log(conditions);
 
   return (
     <section className='conditions'>
