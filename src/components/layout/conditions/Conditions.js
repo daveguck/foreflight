@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import ConditionsContext from '../../../context/conditions/conditionsContext';
+import { convertToFahrenheit } from '../../../helperFuncs';
 
 import './Conditions.scss';
 
@@ -19,14 +20,16 @@ const Conditions = () => {
             <use xlinkHref='images/symbol-defs.svg#icon-thermometer'></use>
           </svg>
           <h4 className='label'>Temperature</h4>
-          <p className='temperature'>75&deg;F</p>
+          <p className='temperature'>
+            {convertToFahrenheit(conditions.tempC)}&deg;
+          </p>
         </div>
         <div className='conditions__weather__card'>
           <svg className='icon'>
             <use xlinkHref='images/symbol-defs.svg#icon-drop'></use>
           </svg>
           <h4 className='label'>Relative Humidity</h4>
-          <p className='temperature'>43%</p>
+          <p className='humidity'>{conditions.relativeHumidity}%</p>
         </div>
         <div className='conditions__weather__card'>
           <svg className='icon'>
