@@ -9,8 +9,6 @@ const Conditions = () => {
 
   const { conditions } = conditionsContext;
 
-  console.log(conditions);
-
   if (Object.keys(conditions).length === 0) {
     return null;
   } else {

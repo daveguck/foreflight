@@ -1,12 +1,15 @@
 import React, { useState, useContext } from 'react';
 import ConditionsContext from '../../../context/conditions/conditionsContext';
+import AirportContext from '../../../context/airport/airportContext';
 
 import './Navbar.scss';
 
 const Navbar = () => {
   const conditionsContext = useContext(ConditionsContext);
+  const airportContext = useContext(AirportContext);
 
-  const { getConditions, loading } = conditionsContext;
+  const { getConditions } = conditionsContext;
+  const { getAirport } = airportContext;
 
   const [text, setText] = useState('');
 
@@ -15,6 +18,7 @@ const Navbar = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     getConditions(text);
+    getAirport(text);
     setText('');
   };
 
