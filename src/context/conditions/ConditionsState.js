@@ -5,7 +5,7 @@ import { GET_CONDITIONS, SET_LOADING } from '../types';
 
 const ConditionsState = (props) => {
   const initialState = {
-    conditions: [],
+    conditions: {},
     loading: false,
   };
 
