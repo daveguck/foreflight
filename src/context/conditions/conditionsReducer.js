@@ -1,4 +1,4 @@
-import { GET_CONDITIONS, SET_LOADING } from '../types';
+import { GET_CONDITIONS } from '../types';
 
 export default (state, action) => {
   switch (action.type) {

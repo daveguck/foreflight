@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import ConditionsContext from './conditionsContext';
 import ConditionsReducer from './conditionsReducer';
-import { GET_CONDITIONS, SET_LOADING } from '../types';
+import { GET_CONDITIONS } from '../types';
 
 const ConditionsState = (props) => {
   const initialState = {
@@ -24,13 +24,10 @@ const ConditionsState = (props) => {
     });
   };
 
-  const setLoading = () => dispatch({ type: SET_LOADING });
-
   return (
     <ConditionsContext.Provider
       value={{
         conditions: state.conditions,
-        loading: state.loading,
         getConditions,
       }}
     >

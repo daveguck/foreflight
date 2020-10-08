@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import AirportContext from './airportContext';
 import AirportReducer from './airportReducer';
-import { GET_AIRPORT, SET_LOADING } from '../types';
+import { GET_AIRPORT } from '../types';
 
 const AirportState = (props) => {
   const initialState = {
@@ -21,15 +21,11 @@ const AirportState = (props) => {
 
     const data = await response.json();
 
-    console.log(data);
-
     dispatch({
       type: GET_AIRPORT,
       payload: data,
     });
   };
-
-  const setLoading = () => dispatch({ type: SET_LOADING });
 
   return (
     <AirportContext.Provider

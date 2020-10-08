@@ -1,4 +1,4 @@
-import { GET_AIRPORT, SET_LOADING } from '../types';
+import { GET_AIRPORT } from '../types';
 
 export default (state, action) => {
   switch (action.type) {
