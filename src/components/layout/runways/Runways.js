@@ -10,17 +10,19 @@ export const Runways = () => {
 
   const { airport } = airportContext;
 
+  console.log(airport.runways);
+
   if (Object.keys(airport).length <= 1) {
     return null;
   } else {
     return (
       <div className='runways'>
         <h1 className='runways__title'>Available Runways</h1>
-        {/* <div>
-          {runway.map((runway) => (
-            <RunwayItem airport={runway} />
+        <div className='runways__runway'>
+          {airport.runways.map((runway) => (
+            <RunwayItem runway={runway} />
           ))}
-        </div> */}
+        </div>
       </div>
     );
   }

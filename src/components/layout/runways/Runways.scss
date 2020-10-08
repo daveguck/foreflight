@@ -1,12 +1,19 @@
 .runways {
   max-width: 80%;
-  margin: 30px auto;
+  margin: 2rem auto;
   text-align: center;
   font-size: 1.6rem;
 
   &__title {
     font-weight: 500;
     font-size: 2.7rem;
-    margin: 3.2rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  &__runway {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
   }
 }
