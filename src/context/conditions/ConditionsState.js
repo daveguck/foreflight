@@ -13,7 +13,7 @@ const ConditionsState = (props) => {
 
   const getConditions = async (identifier) => {
     const response = await fetch(
-      `http://localhost:3000/weather/${identifier}.json`
+      `https://hidden-coast-89842.herokuapp.com//weather/${identifier}.json`
     );
 
     const data = await response.json();

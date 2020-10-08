@@ -16,7 +16,7 @@ const AirportState = (props) => {
 
   const getAirport = async (identifier) => {
     const response = await fetch(
-      `http://localhost:3000/airports/${identifier}.json`
+      `https://hidden-coast-89842.herokuapp.com//airports/${identifier}.json`
     );
 
     const data = await response.json();
