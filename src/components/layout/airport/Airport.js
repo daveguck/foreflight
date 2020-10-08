@@ -23,6 +23,7 @@ const Airport = () => {
     return (
       <section className='airport'>
         <h1 className='airport__name'>{airport.name}</h1>
+        <h2 className='airport__icao'>{airport.icao}</h2>
         <div className='airport__latlong'>
           <div className='latitude'>
             <p className='latitude__title'>Latitude:</p>

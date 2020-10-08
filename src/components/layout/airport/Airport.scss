@@ -10,12 +10,16 @@
 
   &__name {
     font-size: 4rem;
-
-    margin: 7px;
+    margin: 0.7rem 0 0.3rem 0;
 
     span {
       font-size: 3rem;
     }
+  }
+
+  &__icao {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
   &__icao-list {
@@ -33,7 +37,7 @@
     .latitude,
     .longitude {
       font-size: 1.8rem;
-      margin-right: 1.4rem;
+      margin-right: 1.7rem;
     }
   }
 
