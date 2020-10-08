@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react';
 import ConditionsContext from '../../../context/conditions/conditionsContext';
 import AirportContext from '../../../context/airport/airportContext';
 
+import { Link } from 'react-router-dom';
+
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -24,11 +26,13 @@ const Navbar = () => {
 
   return (
     <header className='header'>
-      <img
-        src='/images/foreflightLogo.png'
-        alt='foreflight logo'
-        className='header__logo'
-      />
+      <Link to='/'>
+        <img
+          src='/images/foreflightLogo.png'
+          alt='foreflight logo'
+          className='header__logo'
+        />
+      </Link>
       <form onSubmit={onSubmit} className='find-airport'>
         <input
           type='text'
@@ -37,6 +41,7 @@ const Navbar = () => {
           className='find-airport__input'
           placeholder='Search Airports'
           onChange={onChange}
+          required
         />
         <button className='find-airport__button'>
           <svg className='find-airport__button__icon'>
@@ -45,8 +50,16 @@ const Navbar = () => {
         </button>
       </form>
       <nav className='user-nav'>
-        <span className='user-nav__item'>Home</span>
-        <span className='user-nav__item'>About</span>
+        <span className='user-nav__item'>
+          <Link to='/' className='link'>
+            Home
+          </Link>
+        </span>
+        <span className='user-nav__item'>
+          <Link to='/about' className='link'>
+            About
+          </Link>
+        </span>
       </nav>
     </header>
   );
