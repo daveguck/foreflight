@@ -10,8 +10,15 @@ const Airport = () => {
 
   console.log(airport);
 
-  if (Object.keys(airport).length === 0) {
-    return null;
+  if (Object.keys(airport).length <= 1) {
+    return (
+      <section className='airport'>
+        <h1 className='airport__name'>{airport.name}</h1>
+        <p className='airport__icao-list'>
+          Available icao's: kaus, khou, egll, 50r
+        </p>
+      </section>
+    );
   } else {
     return (
       <section className='airport'>
@@ -25,14 +32,6 @@ const Airport = () => {
             <p className='longitude__title'> Longitude:</p>
             <p className='longitude__coordinates'>{airport.longitude}</p>
           </div>
-        </div>
-        <div className='airport__runways'>
-          <h2 className='runways-title'>Available Runways:</h2>
-          <div className='runway'>Runway1</div>
-          <div className='runway'>Runway2</div>
-          <div className='runway'>Runway3</div>
-          <div className='runway'>Runway4</div>
-          <div className='runway'>Runway5</div>
         </div>
       </section>
     );

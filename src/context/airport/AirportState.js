@@ -5,7 +5,10 @@ import { GET_AIRPORT, SET_LOADING } from '../types';
 
 const AirportState = (props) => {
   const initialState = {
-    airport: {},
+    airport: {
+      name:
+        'Enter an airport identifier (icao) for information about that airport',
+    },
     loading: false,
   };
 

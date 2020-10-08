@@ -5,6 +5,7 @@ import AirportState from './context/airport/AirportState';
 import Navbar from './components/layout/navbar/Navbar';
 import Airport from './components/layout/airport/Airport';
 import Conditions from './components/layout/conditions/Conditions';
+import Runways from './components/layout/runways/Runways';
 
 import './sass/App.scss';
 
@@ -15,6 +16,7 @@ function App() {
         <div className='container'>
           <Navbar />
           <Airport />
+          <Runways />
           <Conditions />
         </div>
       </ConditionsState>
