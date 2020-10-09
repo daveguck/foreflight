@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.scss';
 
 const Navbar = () => {
+  console.log(window);
   const conditionsContext = useContext(ConditionsContext);
   const airportContext = useContext(AirportContext);
 

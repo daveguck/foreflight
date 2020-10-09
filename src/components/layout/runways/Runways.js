@@ -10,8 +10,6 @@ export const Runways = () => {
 
   const { airport } = airportContext;
 
-  console.log(airport.runways);
-
   if (Object.keys(airport).length <= 1) {
     return null;
   } else {

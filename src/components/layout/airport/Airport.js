@@ -8,8 +8,6 @@ const Airport = () => {
 
   const { airport } = airportContext;
 
-  console.log(airport);
-
   if (Object.keys(airport).length <= 1) {
     return (
       <section className='airport'>

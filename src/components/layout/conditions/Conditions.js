@@ -9,8 +9,6 @@ const Conditions = () => {
 
   const { conditions } = conditionsContext;
 
-  console.log(conditions);
-
   if (conditions === undefined) {
     return (
       <div className='no-conditions'>
