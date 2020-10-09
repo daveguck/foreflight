@@ -10,7 +10,9 @@ export const RunwayItem = ({ runway }) => {
       <p>Length: {`${runway.length}ft`}</p>
       <p>Width: {`${runway.width}ft`}</p>
       <p>Surface Type: {runway.surfaceType}</p>
-      <p>Surface Quality: {runway.surfaceQuality}</p>
+      <p>
+        Surface Quality: {runway.surfaceQuality ? runway.surfaceQuality : 'N/A'}
+      </p>
     </div>
   );
 };
