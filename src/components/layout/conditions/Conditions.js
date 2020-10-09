@@ -1,6 +1,10 @@
 import React, { useContext } from 'react';
 import ConditionsContext from '../../../context/conditions/conditionsContext';
-import { convertToFahrenheit, knotsToMPH } from '../../../helperFuncs';
+import {
+  convertToFahrenheit,
+  knotsToMPH,
+  degreesToDirections,
+} from '../../../helperFuncs';
 
 import './Conditions.scss';
 
@@ -72,7 +76,9 @@ const Conditions = () => {
                   <use xlinkHref='images/symbol-defs.svg#icon-hair-cross'></use>
                 </svg>
                 <h4 className='label'>Wind Direction</h4>
-                <p className='temperature'>NNW</p>
+                <p className='temperature'>
+                  {degreesToDirections(conditions.wind.direction)}
+                </p>
               </div>
             </div>
           </>
