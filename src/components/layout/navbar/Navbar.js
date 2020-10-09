@@ -8,7 +8,6 @@ import './Navbar.scss';
 
 const Navbar = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
 
   const conditionsContext = useContext(ConditionsContext);
   const airportContext = useContext(AirportContext);
