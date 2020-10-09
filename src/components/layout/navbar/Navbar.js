@@ -2,11 +2,14 @@ import React, { useState, useContext } from 'react';
 import ConditionsContext from '../../../context/conditions/conditionsContext';
 import AirportContext from '../../../context/airport/airportContext';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import './Navbar.scss';
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+  console.log(pathname);
+
   const conditionsContext = useContext(ConditionsContext);
   const airportContext = useContext(AirportContext);
 
@@ -41,9 +44,13 @@ const Navbar = () => {
           className='find-airport__input'
           placeholder='Search Airports'
           onChange={onChange}
+          disabled={pathname === '/about' ? true : false}
           required
         />
-        <button className='find-airport__button'>
+        <button
+          className='find-airport__button'
+          disabled={pathname === '/about' ? true : false}
+        >
           <svg className='find-airport__button__icon'>
             <use xlinkHref='images/symbol-defs.svg#icon-magnifying-glass'></use>
           </svg>
